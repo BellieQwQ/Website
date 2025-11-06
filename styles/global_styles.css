@@ -17,11 +17,14 @@
     margin: 0;
 }
 
-html, body{
-    height: 100%;
-}
 
 body{
-    margin: 0 20%;
     background-color: black;
+}
+
+.main_container{
+    margin-left: 20%;
+    margin-right: 20%;
+    max-height: 100vh;
+    position: relative;
 }

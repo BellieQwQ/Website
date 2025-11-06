@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "windows_retro"; 
+    src: url("../assets/fonts//windows_retro.ttf"); 
+}
+
+@font-face {
+    font-family: "vga_console";
+    src: url("../assets/fonts/vga_console.ttf");
+}
+
+:root{
+    --primary-grey-solid: rgb(182, 182, 182);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    margin: 0 20%;
+    background-color: black;
+}

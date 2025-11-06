@@ -1,0 +1,41 @@
+.main_screen{
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+}
+
+.task_bar{
+    box-sizing: border-box;
+    background-color: var(--primary-grey-solid);
+    width: 100%;
+    height: 6%;
+    margin-top: auto;
+    border-top: 3px outset;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+.start_button{
+    width: 10%;
+    height: 80%;
+    border: 3px outset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "windows_retro"; 
+    font-size: 25px;
+    padding-bottom: 2px;
+}
+
+.separator_gadget{
+    width: 5px;
+    height: 80%;
+    border: 3px outset;
+}
+

@@ -1,6 +1,6 @@
 @font-face {
     font-family: "windows_retro"; 
-    src: url("../assets/fonts//windows_retro.ttf"); 
+    src: url("../assets/fonts//windows_regular.ttf"); 
 }
 
 @font-face {
@@ -9,7 +9,8 @@
 }
 
 :root{
-    --primary-grey-solid: rgb(182, 182, 182);
+    --primary-grey-solid: rgb(205, 205, 205);
+    --primary-cyan-solid: rgb(73, 145, 144);
 }
 
 *{

@@ -12,14 +12,14 @@ const lines = [
 ];
 
 const texts = [
-  "SaturnWare S94 version 3.0.2a",
+  "SaturnWare SA-94 version 3.0.2a",
   "@Copyright 1994.12.07 SaturnWare, Inc.",
   "Starting SaturnOS v1.4...",
   "C://SystemFiles/SaturnOS/HyperionBIOS/Startup_Wizard.exe",
   "Initializing Hyperion BIOS ... OK!",
   "Video Adapter: SaturnXVISION ... OK!",
   "Input Device: Neptune Interface 4 ... OK!",
-  "Loading SaturnNet v0.9 ... OK!",
+  "Loading WorldNet Navigator v0.9 ... OK!",
   "Loading SaturnOS File Manager ... OK!",
   "Initializing...",
 ];

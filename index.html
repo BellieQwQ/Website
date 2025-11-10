@@ -5,69 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/global_styles.css">
     <link rel="stylesheet" href="./styles/booting_styles.css">
-    <link rel="stylesheet" href="./styles/main_screen_styles.css">
     <title>SaturnWare</title>
 </head>
 <body>
-    <audio autoplay muted>
-        <source src="/assets/audio/booting_sfx.mp3">
+    <audio autoplay>
+        <source src="./assets/audio/booting_sfx.mp3">
     </audio>
-    <div class="main_container">
-        <div class="booting_screen">
-            <section>
-                <p id="line_1_booting"></p>
-                <p id="line_2_booting"></p>
+    <div class="viewport">
+        <div class="stage">
+            <div class="booting_screen">
+                <section>
+                    <p id="line_1_booting"></p>
+                    <p id="line_2_booting"></p>
 
-                <br>
+                    <br>
 
-                <p id="line_3_booting"></p>
-                <p id="line_4_booting"></p>
+                    <p id="line_3_booting"></p>
+                    <p id="line_4_booting"></p>
 
-                <br>
+                    <br>
 
-                <p id="line_5_booting"></p>
-                <p id="line_6_booting"></p>
-                <p id="line_7_booting"></p>
+                    <p id="line_5_booting"></p>
+                    <p id="line_6_booting"></p>
+                    <p id="line_7_booting"></p>
 
-                <br>
+                    <br>
 
-                <p id="line_8_booting"></p>
-                <p id="line_9_booting"></p>
+                    <p id="line_8_booting"></p>
+                    <p id="line_9_booting"></p>
+                    <p id="line_10_booting"></p>
 
-                <br>
+                    <br>
 
-                <p id="line_10_booting"></p>
-            </section>
+                    <p id="line_11_booting"></p>
+                    <p id="error_message"></p>
+                </section>
 
-            <form>
-                <label>C://SystemFiles/SaturnOS/User: </label>
-                <div id="prompt_gadget"></div>
-            </form>
-        </div>
-
-        <div class="main_screen">
-            <div class="task_bar">
-                <div class="start_button"><img src="./assets/icons/computer_icon.png" class="task_bar_icon">System</div> 
-                <div class="separator_gadget"></div>
-                <div class="active_window"><img src="./assets/icons/browser_icon.png" class="task_bar_icon">WebSurfer</div>
-                <div class="unactive_window"><img src="./assets/icons/folder_icon.png" class="task_bar_icon">File Manager</div>
-                <div class="unactive_window"><img src="./assets/icons/control_panel_icon.png" class="task_bar_icon">Control Panel</div>
                 
-                <div class="task_bar_unopened">
-                    <img src="./assets/icons/audio_icon.png" class="task_bar_icon">
-                    <img src="./assets/icons/connection_icon.png" class="task_bar_icon">
-                    <img src="./assets/icons/document_folder_icon.png" class="task_bar_icon">
-                </div>
-                
-                <div class="clock">
-                    <p id="date">06/11/1995</p>
-                    <p id="hour"></p>
-                </div>
+                <section class="user_confirmation">
+                    <p>C://SystemFiles/SaturnOS/Sys_Run: </p>
+                    <div class="input_line"><p id="command_line_input"></p><div id="prompt_gadget"></div></div>
+                    
+                </section>
             </div>
         </div>
     </div>
 
     <script src="./scripts/booting.js"></script>
-    <script src="./scripts/taskbar_clock.js"></script>
 </body>
 </html>

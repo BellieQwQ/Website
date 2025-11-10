@@ -9,24 +9,29 @@ const lines = [
   document.getElementById("line_8_booting"),
   document.getElementById("line_9_booting"),
   document.getElementById("line_10_booting"),
+  document.getElementById("line_11_booting"),
+  document.getElementById("error_message"),
 ];
 
 const texts = [
   "SaturnWare SA-94 version 3.0.2a",
-  "@Copyright 1994.12.07 SaturnWare, Inc.",
-  "Starting SaturnOS v1.4...",
+  "(C) Copyright 1994.12.07 SaturnWare, Inc.",
+  "Starting SaturnOS v1.4 ...",
   "C://SystemFiles/SaturnOS/HyperionBIOS/Startup_Wizard.exe",
   "Initializing Hyperion BIOS ... OK!",
-  "Video Adapter: SaturnXVISION ... OK!",
-  "Input Device: Neptune Interface 4 ... OK!",
-  "Loading WorldNet Navigator v0.9 ... OK!",
-  "Loading SaturnOS File Manager ... OK!",
-  "Initializing...",
+  "GPU: SaturnXVISION 2MB VGA ... OK!",
+  "CPU: 7071 UC-EMA 75MHz ... OK!",
+  "Memory Test: 7896Kb ... OK!",
+  "HDD SysteMAX RAZDAC 400MB ... OK!",
+  "Floppy Disk Reader SaturnRX 1.44MB ... OK!",
+  `Run "sysinit -r" To Start The System.`,
 ];
 
+const command = document.getElementById("command_line_input");
+const error = document.getElementById("error_message");
+
 function setRandomTime() {
-  let randomTime = Math.floor(Math.random() * (2000 - 100)) + 100;
-  return randomTime;
+  return Math.floor(Math.random() * (2000 - 100)) + 100;
 }
 
 let counter = 0;
@@ -40,4 +45,65 @@ function showLines() {
   }
 }
 
-setTimeout(showLines, 3000);
+setTimeout(showLines, 2000);
+
+document.addEventListener("keydown", (event) => {
+  const ignoreKeys = [
+    "Shift",
+    "Control",
+    "Alt",
+    "CapsLock",
+    "Tab",
+    "Meta",
+    "ArrowLeft",
+    "ArrowRight",
+    "ArrowUp",
+    "ArrowDown",
+    "Escape",
+  ];
+
+  if (ignoreKeys.includes(event.key)) return;
+
+  if (event.key === "Enter") {
+    runSystem();
+    return;
+  }
+
+  if (event.key === "Backspace") {
+    command.textContent = command.textContent.slice(0, -1);
+    return;
+  }
+
+  if (event.key === " ") {
+    event.preventDefault();
+    command.textContent += " ";
+    return;
+  }
+
+  if (event.key.length === 1) {
+    command.textContent += event.key;
+  }
+});
+
+function runSystem() {
+  const input = command.textContent.trim();
+
+  if (input !== "sysinit -r") {
+    error.textContent = `[ERROR] Command ${command.textContent} is invalid, run "sysinit -r" instead`;
+    command.textContent = " ";
+  } else {
+    const blackout = document.createElement("div");
+    blackout.style.position = "fixed";
+    blackout.style.top = 0;
+    blackout.style.left = 0;
+    blackout.style.width = "100%";
+    blackout.style.height = "100%";
+    blackout.style.backgroundColor = "#000";
+    blackout.style.zIndex = 9999;
+    document.body.appendChild(blackout);
+
+    setTimeout(() => {
+      window.location.href = "main_screen.html";
+    }, 2000);
+  }
+}

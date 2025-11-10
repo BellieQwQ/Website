@@ -1,6 +1,5 @@
 .main_screen{
     z-index: 1;
-    height: 100vh;
     box-sizing: border-box;
     background-color: var(--primary-cyan-solid);
     display: flex;
@@ -11,7 +10,7 @@
     box-sizing: border-box;
     background-color: var(--primary-grey-solid);
     width: 100%;
-    height: 6%;
+    height: 60px;
     margin-top: auto;
     border-top: 3px outset;
     display: flex;
@@ -24,8 +23,8 @@
 
 .start_button{
     padding: 0 8px;
-    width: 9%;
-    height: 80%;
+    width: 90px;
+    height: 40px;
     border: 3px outset;
     display: flex;
     justify-content: space-between;
@@ -37,14 +36,14 @@
 
 .separator_gadget{
     width: 5px;
-    height: 88%;
+    height: 42px;
     border: 3px outset;
 }
 
 .unactive_window{
     padding: 0 0px;
-    width: 17%;
-    height: 80%;
+    width: 150px;
+    height: 40px;
     border: 3px outset;
     display: flex;
     justify-content: center;
@@ -57,8 +56,8 @@
 
 .active_window{
     padding: 0 0px;
-    width: 15%;
-    height: 80%;
+    width: 150px;
+    height: 40px;
     border: 3px inset;
     display: flex;
     justify-content: center;
@@ -71,11 +70,12 @@
 }
 
 .clock{
-    width: 20%;
-    height: 80%;
+    width: 180px;
+    height: 40px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     margin-left: auto;
     font-family: "windows_retro"; 
     font-size: 20px;
@@ -84,9 +84,15 @@
 }
 
 .task_bar_icon{
-    height: 90%;
+    height: 32px;
 }
 
-/* .task_bar_unopened{
-    margin-right: 7px;
-} */
+.task_bar_icon_unopened{
+    margin-top: 5px;
+    padding: 5px 5px;
+    height: 32px;
+    border: 3px outset;
+    overflow: hidden;
+}
+
+

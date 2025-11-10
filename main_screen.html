@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/global_styles.css">
+    <link rel="stylesheet" href="./styles/main_screen_styles.css">
+    <title>SaturnWare</title>
+</head>
+<body>
+    <div class="viewport">
+        <div class="stage">
+            <div class="main_screen">
+                <div class="task_bar">
+                    <div class="start_button"><img src="./assets/icons/computer_icon.png" class="task_bar_icon">System</div> 
+                    <div class="separator_gadget"></div>
+                    <div class="active_window"><img src="./assets/icons/browser_icon.png" class="task_bar_icon">WebSurfer</div>
+                    <div class="unactive_window"><img src="./assets/icons/folder_icon.png" class="task_bar_icon">File Manager</div>
+                    <div class="unactive_window"><img src="./assets/icons/control_panel_icon.png" class="task_bar_icon">Control Panel</div>
+                            
+                        <!-- <div class="task_bar_unopened">
+                            <img src="./assets/icons/connection_icon.png" class="task_bar_icon_unopened">
+                            <img src="./assets/icons/document_folder_icon.png" class="task_bar_icon_unopened">
+                            <img src="./assets/icons/device_manager_icon.png" class="task_bar_icon_unopened">
+                        </div> -->
+                            
+                    <div class="clock">
+                        <p id="date">06/11/1995</p>
+                        <p id="hour"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/taskbar_clock.js"></script>
+</body>
+</html>

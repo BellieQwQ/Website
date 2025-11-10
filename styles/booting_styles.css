@@ -1,7 +1,6 @@
 .booting_screen{
     position: absolute;
-    z-index: 0;
-    opacity: 0; /*CHANGE THIS IN THE FUTURE!!!!!!!!!!!*/    
+    z-index: 10;
     height: 100vh;
     width: 100%;
     box-sizing: border-box;
@@ -15,8 +14,9 @@
     justify-content: space-between;
 }
 
-.booting_screen form {
+.input_line{
     display: flex;
+    flex-direction: row;
 }
 
 #prompt_gadget{

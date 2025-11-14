@@ -10,7 +10,6 @@ const lines = [
   document.getElementById("line_9_booting"),
   document.getElementById("line_10_booting"),
   document.getElementById("line_11_booting"),
-  document.getElementById("error_message"),
 ];
 
 const texts = [
@@ -20,7 +19,7 @@ const texts = [
   "C://SystemFiles/SaturnOS/HyperionBIOS/Startup_Wizard.exe",
   "Initializing Hyperion BIOS ... OK!",
   "GPU: SaturnXVISION 2MB VGA ... OK!",
-  "CPU: 7071 UC-EMA 75MHz ... OK!",
+  "CPU: TECNECO 7071 75MHz ... OK!",
   "Memory Test: 7896Kb ... OK!",
   "HDD SysteMAX RAZDAC 400MB ... OK!",
   "Floppy Disk Reader SaturnRX 1.44MB ... OK!",
@@ -28,7 +27,6 @@ const texts = [
 ];
 
 const command = document.getElementById("command_line_input");
-const error = document.getElementById("error_message");
 
 function setRandomTime() {
   return Math.floor(Math.random() * (2000 - 100)) + 100;
@@ -38,8 +36,11 @@ let counter = 0;
 
 function showLines() {
   lines[counter].textContent = texts[counter];
+  if (counter === 10) {
+    lines[counter].classList.add("blinking-line");
+  }
   counter++;
-  if (counter < lines.length) {
+  if (counter < texts.length) {
     const delay = setRandomTime();
     setTimeout(showLines, delay);
   }
@@ -89,7 +90,8 @@ function runSystem() {
   const input = command.textContent.trim();
 
   if (input !== "sysinit -r") {
-    error.textContent = `[ERROR] Command ${command.textContent} is invalid, run "sysinit -r" instead`;
+    lines[10].textContent = `[ERROR] Command ${command.textContent} is invalid, run "sysinit -r" instead`;
+    lines[10].classList.remove("blinking-line");
     command.textContent = " ";
   } else {
     const blackout = document.createElement("div");

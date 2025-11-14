@@ -23,7 +23,15 @@
     height: 25px;
     width: 8px;
     background-color: white;
-    animation: blink 1s steps(1) infinite;
+    animation: gadget_blink 1s steps(1) infinite;
 }
 
-@keyframes blink { 50% { opacity: 0;} }
+#line_11_booting{
+}
+
+.blinking-line{
+    animation: error_blink 2s steps(1) infinite;
+}
+
+@keyframes gadget_blink { 50% { opacity: 0;} }
+@keyframes error_blink { 50% { opacity: 0;} }

@@ -1,0 +1,42 @@
+.splash_container{
+    background-color: black;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.splash_screen{
+    width: 50%;
+}
+
+.loading_bar_container{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.loading_bar{
+    width: 85%;
+    height: 20px;
+    border: 5px solid white;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+#progress_content{
+    height: 80%;
+    width: 0%;
+    background-color: white;
+}
+
+#loading_percentage{
+    color: white;
+    font-family: "vga_console";
+    font-size: 25px;
+}

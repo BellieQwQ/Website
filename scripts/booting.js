@@ -105,7 +105,7 @@ function runSystem() {
     document.body.appendChild(blackout);
 
     setTimeout(() => {
-      window.location.href = "main_screen.html";
+      window.location.href = "splash_screen.html";
     }, 2000);
   }
 }

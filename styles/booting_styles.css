@@ -26,9 +26,6 @@
     animation: gadget_blink 1s steps(1) infinite;
 }
 
-#line_11_booting{
-}
-
 .blinking-line{
     animation: error_blink 2s steps(1) infinite;
 }
